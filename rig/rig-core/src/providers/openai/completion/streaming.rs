@@ -35,6 +35,8 @@ pub(crate) struct StreamingToolCall {
 struct StreamingDelta {
     #[serde(default)]
     content: Option<String>,
+    #[serde(default)]
+    reasoning_content: Option<String>,
     #[serde(default, deserialize_with = "json_utils::null_or_vec")]
     tool_calls: Vec<StreamingToolCall>,
 }
@@ -249,6 +251,11 @@ where
                     if let Some(content) = &delta.content && !content.is_empty() {
                         text_content += content;
                         yield Ok(streaming::RawStreamingChoice::Message(content.clone()));
+                    }
+
+                    // Streamed reasoning content
+                    if let Some(reasoning_content) = &delta.reasoning_content && !reasoning_content.is_empty(){
+                        yield Ok(streaming::RawStreamingChoice::Reasoning { id: None, reasoning:  reasoning_content.clone(), signature: None});
                     }
 
                     // Finish reason

@@ -3806,7 +3806,7 @@ dependencies = [
  "libc",
  "option-ext",
  "redox_users 0.5.0",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -10133,7 +10133,7 @@ dependencies = [
  "base64 0.22.1",
  "nanoid",
  "reqwest 0.12.24",
- "rig-core 0.30.0",
+ "rig-core",
  "rig-derive",
  "schemars 1.0.4",
  "serde",
@@ -10142,30 +10142,6 @@ dependencies = [
  "tracing",
  "tracing-subscriber",
  "uuid 1.18.1",
-]
-
-[[package]]
-name = "rig-core"
-version = "0.17.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e57d16b6bc8ed1a4d7cea51782f1c6320e0a98b01a8de719540251a81b027ffb"
-dependencies = [
- "as-any",
- "async-stream",
- "base64 0.22.1",
- "bytes",
- "futures",
- "glob",
- "mime_guess",
- "ordered-float 5.0.0",
- "reqwest 0.12.24",
- "schemars 0.8.22",
- "serde",
- "serde_json",
- "thiserror 2.0.16",
- "tracing",
- "url",
- "worker",
 ]
 
 [[package]]
@@ -10229,7 +10205,7 @@ dependencies = [
  "indoc",
  "proc-macro2",
  "quote",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "syn 2.0.106",
@@ -10245,7 +10221,7 @@ dependencies = [
  "async-stream",
  "ethers",
  "reqwest 0.12.24",
- "rig-core 0.30.0",
+ "rig-core",
  "schemars 1.0.4",
  "serde",
  "serde_json",
@@ -10260,7 +10236,7 @@ version = "0.2.22"
 dependencies = [
  "anyhow",
  "fastembed",
- "rig-core 0.30.0",
+ "rig-core",
  "schemars 1.0.4",
  "serde",
  "serde_json",
@@ -10273,7 +10249,7 @@ name = "rig-helixdb"
 version = "0.1.10"
 dependencies = [
  "helix-rs",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "tokio",
@@ -10289,7 +10265,7 @@ dependencies = [
  "futures",
  "httpmock",
  "lancedb",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "tokio",
@@ -10301,7 +10277,7 @@ version = "0.1.22"
 dependencies = [
  "anyhow",
  "reqwest 0.12.24",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "tokio",
@@ -10317,7 +10293,7 @@ dependencies = [
  "futures",
  "httpmock",
  "mongodb",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "testcontainers",
@@ -10334,7 +10310,7 @@ dependencies = [
  "futures",
  "httpmock",
  "neo4rs",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "term_size",
@@ -10354,7 +10330,7 @@ dependencies = [
  "httpmock",
  "log",
  "pgvector",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "sqlx",
@@ -10373,7 +10349,7 @@ dependencies = [
  "anyhow",
  "httpmock",
  "qdrant-client",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "testcontainers",
@@ -10389,7 +10365,7 @@ dependencies = [
  "aws-config",
  "aws-sdk-s3vectors",
  "aws-smithy-types",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "tokio",
@@ -10406,7 +10382,7 @@ dependencies = [
  "chrono",
  "futures",
  "httpmock",
- "rig-core 0.30.0",
+ "rig-core",
  "scylla",
  "serde",
  "serde_json",
@@ -10424,7 +10400,7 @@ dependencies = [
  "anyhow",
  "chrono",
  "httpmock",
- "rig-core 0.30.0",
+ "rig-core",
  "rusqlite",
  "serde",
  "serde_json",
@@ -10441,7 +10417,7 @@ name = "rig-surrealdb"
 version = "0.1.28"
 dependencies = [
  "anyhow",
- "rig-core 0.30.0",
+ "rig-core",
  "serde",
  "serde_json",
  "surrealdb",
@@ -10458,7 +10434,7 @@ dependencies = [
  "anyhow",
  "google-cloud-aiplatform-v1",
  "google-cloud-auth",
- "rig-core 0.30.0",
+ "rig-core",
  "schemars 1.0.4",
  "serde",
  "serde_json",
@@ -10477,7 +10453,6 @@ dependencies = [
  "bytes",
  "console_error_panic_hook",
  "futures",
- "rig-core 0.17.1",
  "send_wrapper 0.6.0",
  "serde",
  "serde-wasm-bindgen",
@@ -11078,18 +11053,6 @@ dependencies = [
 
 [[package]]
 name = "schemars"
-version = "0.8.22"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3fbf2ae1b8bc8e02df939598064d22402220cd5bbcca1c76f7d6a310974d5615"
-dependencies = [
- "dyn-clone",
- "schemars_derive 0.8.22",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "schemars"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4cd191f9397d57d581cddd31014772520aa448f65ef991055d7f61582c65165f"
@@ -11109,21 +11072,9 @@ dependencies = [
  "chrono",
  "dyn-clone",
  "ref-cast",
- "schemars_derive 1.0.4",
+ "schemars_derive",
  "serde",
  "serde_json",
-]
-
-[[package]]
-name = "schemars_derive"
-version = "0.8.22"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32e265784ad618884abaea0600a9adf15393368d840e0222d101a072f3f7534d"
-dependencies = [
- "proc-macro2",
- "quote",
- "serde_derive_internals",
- "syn 2.0.106",
 ]
 
 [[package]]
@@ -14765,80 +14716,6 @@ dependencies = [
  "log",
  "num-traits",
  "thiserror 1.0.69",
-]
-
-[[package]]
-name = "worker"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f6ac1566a3005b790b974f0621d77431e2a47e5f481276485f5ac0485775de2"
-dependencies = [
- "async-trait",
- "bytes",
- "chrono",
- "futures-channel",
- "futures-util",
- "http 1.3.1",
- "http-body 1.0.1",
- "js-sys",
- "matchit 0.7.3",
- "pin-project",
- "serde",
- "serde-wasm-bindgen",
- "serde_json",
- "serde_urlencoded",
- "tokio",
- "url",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "wasm-streams",
- "web-sys",
- "worker-kv",
- "worker-macros",
- "worker-sys",
-]
-
-[[package]]
-name = "worker-kv"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b0d30eb90e8db0657414129624c0d12c6cb480574bc2ddd584822db196cb9a52"
-dependencies = [
- "js-sys",
- "serde",
- "serde-wasm-bindgen",
- "serde_json",
- "thiserror 2.0.16",
- "wasm-bindgen",
- "wasm-bindgen-futures",
-]
-
-[[package]]
-name = "worker-macros"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5ba7478759843ae3d56dc7ba2445e7a514a5d043eaa98cebac2789f7ab5221ee"
-dependencies = [
- "async-trait",
- "proc-macro2",
- "quote",
- "syn 2.0.106",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "wasm-bindgen-macro-support",
- "worker-sys",
-]
-
-[[package]]
-name = "worker-sys"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eb4d7a3273dd584b9526aec77bbcf815c51d1a0e17407b1a390cf5a39b6d4fbd"
-dependencies = [
- "cfg-if",
- "js-sys",
- "wasm-bindgen",
- "web-sys",
 ]
 
 [[package]]
